@@ -1,0 +1,60 @@
+{
+  "_comment": "Research scope for the YouTube tech-trend report. Edit by hand. Seed channels are the known-good core; discovery_queries find new ones around them.",
+
+  "lookback_days": 60,
+  "max_videos_per_channel": 40,
+  "min_video_duration_seconds": 120,
+  "_recipient_note": "Set REPORT_RECIPIENT in .env (or as a repo secret). Kept out of the committed config so this repo carries no personal data.",
+
+  "seed_channels": [
+    "@fireship",
+    "@t3dotgg",
+    "@ThePrimeagen",
+    "@CodeAesthetic",
+    "@ArjanCodes",
+    "@mCoding",
+    "@TechWithTim",
+    "@codebasics",
+    "@AndrejKarpathy",
+    "@TwoMinutePapers",
+    "@YannicKilcher",
+    "@AIExplained-official",
+    "@matthew_berman",
+    "@indydevdan",
+    "@AllAboutAI",
+    "@samwitteveenai",
+    "@JamesBriggs",
+    "@DataIndependent",
+    "@Thuvu5",
+    "@NeetCode",
+    "@ByteByteGo",
+    "@CodingWithLewis",
+    "@webdevsimplified",
+    "@TheoBrowne",
+    "@continuouslearning",
+    "@MachineLearningStreetTalk",
+    "@sentdex",
+    "@AssemblyAI",
+    "@freecodecamp",
+    "@Computerphile"
+  ],
+
+  "discovery_queries": [
+    "AI coding agents 2026",
+    "LLM application development tutorial",
+    "software engineering career 2026",
+    "best programming language to learn 2026",
+    "AI developer tools review",
+    "machine learning engineering production",
+    "full stack development 2026",
+    "developer productivity AI workflow"
+  ],
+
+  "max_discovery_searches": 8,
+  "max_channels_per_query": 10,
+  "min_channel_subscribers": 20000,
+
+  "transcript_top_n": 120,
+
+  "_quota_note": "search.list = 100 units each. max_discovery_searches * 100 is the discovery cost. Everything downstream is ~1 unit per 50 items. Default config costs roughly 800 + ~150 = under 1000 of the 10000 daily units."
+}

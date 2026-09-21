@@ -1,0 +1,129 @@
+name: Weekly trend report
+
+# Monday 13:00 UTC. The analysis window is 60 days, so consecutive weekly runs
+# overlap heavily and the momentum numbers stay stable rather than jumping
+# around on small-sample noise.
+#
+# Cron on GitHub is best-effort: runs are queued and can start 10-30 minutes
+# late when the platform is busy, and scheduled workflows are disabled
+# automatically after 60 days without repository activity. Neither matters for
+# a weekly digest, but both surprise people.
+on:
+  schedule:
+    - cron: "0 13 * * 1"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Build the message but do not send it"
+        type: boolean
+        default: false
+      template_only:
+        description: "Skip the Anthropic API, use the deterministic narrative"
+        type: boolean
+        default: false
+      full_discovery:
+        description: "Re-run channel discovery (costs ~800 YouTube quota units)"
+        type: boolean
+        default: false
+      lookback_days:
+        description: "Analysis window in days (blank uses config/scope.json)"
+        type: string
+        default: ""
+
+# One report at a time. A queued manual run should wait for the scheduled one
+# rather than racing it for the same YouTube quota.
+concurrency:
+  group: trend-report
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    env:
+      # Secrets cannot be named with a GITHUB_ prefix — that namespace is
+      # reserved — so the GitHub adoption signal uses the token Actions injects
+      # automatically. It is authenticated, which is what the search endpoint
+      # cares about (30 req/min instead of 10), and needs no setup.
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+      REPORT_RECIPIENT: ${{ secrets.REPORT_RECIPIENT }}
+
+      # Optional: residential proxy so the transcript step works from a runner.
+      # Without these the step fails and the run continues without transcripts.
+      TRANSCRIPT_PROXY_PROVIDER: ${{ secrets.TRANSCRIPT_PROXY_PROVIDER }}
+      TRANSCRIPT_PROXY_USERNAME: ${{ secrets.TRANSCRIPT_PROXY_USERNAME }}
+      TRANSCRIPT_PROXY_PASSWORD: ${{ secrets.TRANSCRIPT_PROXY_PASSWORD }}
+
+      SCOPE_LOOKBACK_DAYS: ${{ inputs.lookback_days }}
+      PYTHONUNBUFFERED: "1"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # The transcript cache and the history snapshots are the only state this
+      # pipeline accumulates, and .tmp is gone the moment the runner dies.
+      #
+      # Transcript cache: YouTube rate-limits transcripts at roughly 30 per
+      # session, so the corpus is meant to fill in over many runs rather than
+      # all at once. Losing it every week means permanently shallow analysis.
+      # History: week-over-week comparison is impossible without it.
+      #
+      # A cache key must be unique to write a new entry, so the key carries the
+      # run id and restore-keys falls back to the most recent previous cache.
+      - name: Restore transcript cache and history
+        uses: actions/cache@v4
+        with:
+          path: |
+            .tmp/transcripts
+            .tmp/history
+          key: trend-state-${{ github.run_id }}
+          restore-keys: |
+            trend-state-
+
+      - name: Preflight
+        run: python tools/preflight.py
+
+      - name: Run pipeline
+        id: pipeline
+        run: |
+          python tools/run_pipeline.py \
+            ${{ inputs.full_discovery && ' ' || '--seeds-only' }} \
+            ${{ inputs.dry_run && '--dry-run' || ' ' }} \
+            ${{ inputs.template_only && '--template-only' || ' ' }}
+
+      # always() so a failed run still uploads the log that explains why. This
+      # is the whole of the failure-reporting strategy: the job goes red,
+      # GitHub emails the repository owner, and the log is attached.
+      - name: Upload run log and report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trend-report-${{ github.run_id }}
+          path: |
+            .tmp/runs/
+            .tmp/report.html
+            .tmp/report_spec.json
+            .tmp/charts/
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Summarize
+        if: always()
+        run: python scripts/summarize_run.py >> "$GITHUB_STEP_SUMMARY"

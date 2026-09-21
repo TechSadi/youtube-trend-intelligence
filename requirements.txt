@@ -1,0 +1,22 @@
+# Core
+requests>=2.32
+python-dotenv>=1.0
+
+# YouTube
+google-api-python-client>=2.140
+youtube-transcript-api>=0.6.2
+
+# Google Workspace deliverables (Sheets / Slides / Drive)
+google-auth>=2.34
+google-auth-oauthlib>=1.2
+google-auth-httplib2>=0.2
+
+# Charts for the email report
+matplotlib>=3.8
+
+# Data handling
+pandas>=2.2
+
+# Narrative authoring for unattended runs (tools/author_report_spec.py).
+# Optional: without it, the report falls back to the deterministic template.
+anthropic>=1.0,<2

@@ -1,0 +1,1312 @@
+{
+  "_comment": "Canonical technologies with aliases. Matching is case-insensitive on word boundaries. 'requires_context' entries only count when a context word also appears in the same document -- this is what stops 'Go', 'R' and 'Rust' from matching everyday English.",
+  "_context_words": [
+    "code",
+    "coding",
+    "program",
+    "programming",
+    "developer",
+    "development",
+    "language",
+    "framework",
+    "library",
+    "software",
+    "engineer",
+    "engineering",
+    "backend",
+    "frontend",
+    "api",
+    "compiler",
+    "runtime",
+    "syntax",
+    "repo",
+    "build",
+    "deploy",
+    "script",
+    "function",
+    "app",
+    "stack",
+    "tooling"
+  ],
+  "technologies": [
+    {
+      "id": "python",
+      "name": "Python",
+      "category": "language",
+      "aliases": [
+        "python",
+        "python3"
+      ]
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "category": "language",
+      "aliases": [
+        "javascript",
+        "js",
+        "vanilla js"
+      ]
+    },
+    {
+      "id": "typescript",
+      "name": "TypeScript",
+      "category": "language",
+      "aliases": [
+        "typescript",
+        "ts lang"
+      ]
+    },
+    {
+      "id": "rust",
+      "name": "Rust",
+      "category": "language",
+      "aliases": [
+        "rust",
+        "rustlang",
+        "rust lang"
+      ],
+      "requires_context": [
+        "rust"
+      ]
+    },
+    {
+      "id": "go",
+      "name": "Go",
+      "category": "language",
+      "aliases": [
+        "golang",
+        "go lang"
+      ],
+      "context_aliases": [
+        "go"
+      ],
+      "search_query": "golang"
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "category": "language",
+      "aliases": [
+        "java"
+      ]
+    },
+    {
+      "id": "csharp",
+      "name": "C#",
+      "category": "language",
+      "aliases": [
+        "c#",
+        "csharp",
+        "c sharp",
+        "dotnet",
+        ".net"
+      ]
+    },
+    {
+      "id": "cpp",
+      "name": "C++",
+      "category": "language",
+      "aliases": [
+        "c++",
+        "cpp",
+        "cplusplus"
+      ]
+    },
+    {
+      "id": "zig",
+      "name": "Zig",
+      "category": "language",
+      "aliases": [
+        "zig lang",
+        "ziglang"
+      ],
+      "context_aliases": [
+        "zig"
+      ]
+    },
+    {
+      "id": "mojo",
+      "name": "Mojo",
+      "category": "language",
+      "aliases": [
+        "mojo lang",
+        "mojolang"
+      ],
+      "context_aliases": [
+        "mojo"
+      ]
+    },
+    {
+      "id": "kotlin",
+      "name": "Kotlin",
+      "category": "language",
+      "aliases": [
+        "kotlin"
+      ]
+    },
+    {
+      "id": "swift",
+      "name": "Swift",
+      "category": "language",
+      "aliases": [
+        "swiftui",
+        "swift lang"
+      ],
+      "context_aliases": [
+        "swift"
+      ]
+    },
+    {
+      "id": "ruby",
+      "name": "Ruby",
+      "category": "language",
+      "aliases": [
+        "ruby on rails",
+        "ruby lang"
+      ],
+      "context_aliases": [
+        "ruby"
+      ]
+    },
+    {
+      "id": "php",
+      "name": "PHP",
+      "category": "language",
+      "aliases": [
+        "php"
+      ]
+    },
+    {
+      "id": "elixir",
+      "name": "Elixir",
+      "category": "language",
+      "aliases": [
+        "elixir",
+        "phoenix liveview"
+      ]
+    },
+    {
+      "id": "sql",
+      "name": "SQL",
+      "category": "language",
+      "aliases": [
+        "sql"
+      ]
+    },
+    {
+      "id": "bash",
+      "name": "Bash / Shell",
+      "category": "language",
+      "aliases": [
+        "bash",
+        "zsh",
+        "shell script",
+        "shell scripting"
+      ],
+      "search_query": "bash shell"
+    },
+    {
+      "id": "react",
+      "name": "React",
+      "category": "framework",
+      "aliases": [
+        "react",
+        "reactjs",
+        "react.js"
+      ]
+    },
+    {
+      "id": "nextjs",
+      "name": "Next.js",
+      "category": "framework",
+      "aliases": [
+        "next.js",
+        "nextjs",
+        "next js"
+      ]
+    },
+    {
+      "id": "vue",
+      "name": "Vue",
+      "category": "framework",
+      "aliases": [
+        "vue",
+        "vuejs",
+        "vue.js",
+        "nuxt"
+      ]
+    },
+    {
+      "id": "svelte",
+      "name": "Svelte",
+      "category": "framework",
+      "aliases": [
+        "svelte",
+        "sveltekit"
+      ]
+    },
+    {
+      "id": "angular",
+      "name": "Angular",
+      "category": "framework",
+      "aliases": [
+        "angular",
+        "angularjs"
+      ]
+    },
+    {
+      "id": "solidjs",
+      "name": "SolidJS",
+      "category": "framework",
+      "aliases": [
+        "solidjs",
+        "solid.js"
+      ]
+    },
+    {
+      "id": "astro",
+      "name": "Astro",
+      "category": "framework",
+      "aliases": [
+        "astro build",
+        "astrojs"
+      ],
+      "context_aliases": [
+        "astro"
+      ]
+    },
+    {
+      "id": "htmx",
+      "name": "HTMX",
+      "category": "framework",
+      "aliases": [
+        "htmx"
+      ]
+    },
+    {
+      "id": "tailwind",
+      "name": "Tailwind CSS",
+      "category": "framework",
+      "aliases": [
+        "tailwind",
+        "tailwindcss"
+      ]
+    },
+    {
+      "id": "nodejs",
+      "name": "Node.js",
+      "category": "framework",
+      "aliases": [
+        "node.js",
+        "nodejs",
+        "node js"
+      ]
+    },
+    {
+      "id": "deno",
+      "name": "Deno",
+      "category": "framework",
+      "aliases": [
+        "deno"
+      ]
+    },
+    {
+      "id": "bun",
+      "name": "Bun",
+      "category": "framework",
+      "aliases": [
+        "bun runtime",
+        "bunjs"
+      ],
+      "context_aliases": [
+        "bun"
+      ]
+    },
+    {
+      "id": "django",
+      "name": "Django",
+      "category": "framework",
+      "aliases": [
+        "django"
+      ]
+    },
+    {
+      "id": "fastapi",
+      "name": "FastAPI",
+      "category": "framework",
+      "aliases": [
+        "fastapi",
+        "fast api"
+      ]
+    },
+    {
+      "id": "flask",
+      "name": "Flask",
+      "category": "framework",
+      "aliases": [
+        "flask"
+      ]
+    },
+    {
+      "id": "spring",
+      "name": "Spring Boot",
+      "category": "framework",
+      "aliases": [
+        "spring boot",
+        "springboot"
+      ]
+    },
+    {
+      "id": "rails",
+      "name": "Rails",
+      "category": "framework",
+      "aliases": [
+        "rails",
+        "ruby on rails"
+      ]
+    },
+    {
+      "id": "laravel",
+      "name": "Laravel",
+      "category": "framework",
+      "aliases": [
+        "laravel"
+      ]
+    },
+    {
+      "id": "flutter",
+      "name": "Flutter",
+      "category": "framework",
+      "aliases": [
+        "flutter"
+      ]
+    },
+    {
+      "id": "reactnative",
+      "name": "React Native",
+      "category": "framework",
+      "aliases": [
+        "react native",
+        "reactnative"
+      ]
+    },
+    {
+      "id": "tauri",
+      "name": "Tauri",
+      "category": "framework",
+      "aliases": [
+        "tauri"
+      ]
+    },
+    {
+      "id": "electron",
+      "name": "Electron",
+      "category": "framework",
+      "aliases": [
+        "electron js",
+        "electronjs"
+      ],
+      "context_aliases": [
+        "electron"
+      ]
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "category": "ai-ml",
+      "aliases": [
+        "claude",
+        "anthropic",
+        "claude code",
+        "opus",
+        "sonnet"
+      ],
+      "search_query": "Anthropic Claude"
+    },
+    {
+      "id": "gpt",
+      "name": "GPT / OpenAI",
+      "category": "ai-ml",
+      "aliases": [
+        "gpt-4",
+        "gpt4",
+        "gpt-5",
+        "gpt5",
+        "chatgpt",
+        "openai",
+        "o1 model",
+        "o3 model"
+      ],
+      "search_query": "OpenAI"
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "category": "ai-ml",
+      "aliases": [
+        "gemini",
+        "google deepmind",
+        "bard"
+      ]
+    },
+    {
+      "id": "llama",
+      "name": "Llama",
+      "category": "ai-ml",
+      "aliases": [
+        "llama 3",
+        "llama3",
+        "llama 4",
+        "llama4",
+        "meta llama"
+      ]
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral",
+      "category": "ai-ml",
+      "aliases": [
+        "mistral",
+        "mixtral"
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "category": "ai-ml",
+      "aliases": [
+        "deepseek"
+      ]
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "category": "ai-ml",
+      "aliases": [
+        "qwen",
+        "alibaba qwen"
+      ]
+    },
+    {
+      "id": "grok",
+      "name": "Grok",
+      "category": "ai-ml",
+      "aliases": [
+        "grok",
+        "xai"
+      ]
+    },
+    {
+      "id": "llm",
+      "name": "LLMs (general)",
+      "category": "ai-ml",
+      "aliases": [
+        "llm",
+        "llms",
+        "large language model",
+        "large language models",
+        "foundation model"
+      ],
+      "search_query": "large language model"
+    },
+    {
+      "id": "rag",
+      "name": "RAG",
+      "category": "ai-ml",
+      "aliases": [
+        "rag",
+        "retrieval augmented generation",
+        "retrieval-augmented"
+      ]
+    },
+    {
+      "id": "finetuning",
+      "name": "Fine-tuning",
+      "category": "ai-ml",
+      "aliases": [
+        "fine tuning",
+        "finetuning",
+        "fine-tune",
+        "lora",
+        "qlora",
+        "peft"
+      ],
+      "search_query": "LLM fine-tuning"
+    },
+    {
+      "id": "prompteng",
+      "name": "Prompt Engineering",
+      "category": "ai-ml",
+      "aliases": [
+        "prompt engineering",
+        "prompting",
+        "system prompt",
+        "context engineering"
+      ],
+      "search_query": "prompt engineering"
+    },
+    {
+      "id": "embeddings",
+      "name": "Embeddings",
+      "category": "ai-ml",
+      "aliases": [
+        "embedding",
+        "embeddings",
+        "vector embedding",
+        "semantic search"
+      ]
+    },
+    {
+      "id": "diffusion",
+      "name": "Diffusion / GenAI Media",
+      "category": "ai-ml",
+      "aliases": [
+        "stable diffusion",
+        "midjourney",
+        "diffusion model",
+        "flux model",
+        "sora",
+        "veo"
+      ],
+      "search_query": "stable diffusion"
+    },
+    {
+      "id": "pytorch",
+      "name": "PyTorch",
+      "category": "ai-ml",
+      "aliases": [
+        "pytorch",
+        "torch"
+      ]
+    },
+    {
+      "id": "tensorflow",
+      "name": "TensorFlow",
+      "category": "ai-ml",
+      "aliases": [
+        "tensorflow",
+        "keras"
+      ]
+    },
+    {
+      "id": "huggingface",
+      "name": "Hugging Face",
+      "category": "ai-ml",
+      "aliases": [
+        "hugging face",
+        "huggingface",
+        "transformers library"
+      ]
+    },
+    {
+      "id": "reinforcement",
+      "name": "Reinforcement Learning",
+      "category": "ai-ml",
+      "aliases": [
+        "reinforcement learning",
+        "rlhf",
+        "rl training",
+        "grpo",
+        "ppo"
+      ],
+      "search_query": "reinforcement learning"
+    },
+    {
+      "id": "multimodal",
+      "name": "Multimodal AI",
+      "category": "ai-ml",
+      "aliases": [
+        "multimodal",
+        "multi-modal",
+        "vision language model",
+        "vlm"
+      ],
+      "search_query": "vision language model"
+    },
+    {
+      "id": "smallmodels",
+      "name": "Small / Local Models",
+      "category": "ai-ml",
+      "aliases": [
+        "ollama",
+        "llama.cpp",
+        "llamacpp",
+        "local llm",
+        "local model",
+        "on device model",
+        "quantization",
+        "gguf",
+        "lm studio",
+        "vllm"
+      ],
+      "search_query": "local LLM inference"
+    },
+    {
+      "id": "evals",
+      "name": "Evals & Benchmarks",
+      "category": "ai-ml",
+      "aliases": [
+        "eval",
+        "evals",
+        "benchmark",
+        "benchmarks",
+        "llm as a judge",
+        "swe-bench",
+        "swebench"
+      ],
+      "search_query": "LLM evaluation"
+    },
+    {
+      "id": "agents",
+      "name": "AI Agents",
+      "category": "agents",
+      "aliases": [
+        "ai agent",
+        "ai agents",
+        "agentic",
+        "autonomous agent",
+        "agent framework",
+        "multi agent",
+        "multi-agent"
+      ],
+      "search_query": "AI agents"
+    },
+    {
+      "id": "mcp",
+      "name": "MCP",
+      "category": "agents",
+      "aliases": [
+        "mcp",
+        "model context protocol",
+        "mcp server"
+      ]
+    },
+    {
+      "id": "langchain",
+      "name": "LangChain",
+      "category": "agents",
+      "aliases": [
+        "langchain",
+        "langgraph",
+        "langsmith"
+      ]
+    },
+    {
+      "id": "llamaindex",
+      "name": "LlamaIndex",
+      "category": "agents",
+      "aliases": [
+        "llamaindex",
+        "llama index"
+      ]
+    },
+    {
+      "id": "crewai",
+      "name": "CrewAI",
+      "category": "agents",
+      "aliases": [
+        "crewai",
+        "crew ai"
+      ]
+    },
+    {
+      "id": "autogen",
+      "name": "AutoGen",
+      "category": "agents",
+      "aliases": [
+        "autogen",
+        "auto gen"
+      ]
+    },
+    {
+      "id": "pydanticai",
+      "name": "Pydantic AI",
+      "category": "agents",
+      "aliases": [
+        "pydantic ai",
+        "pydanticai"
+      ]
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "category": "agents",
+      "aliases": [
+        "n8n"
+      ]
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "category": "agents",
+      "aliases": [
+        "cursor ide",
+        "cursor ai",
+        "cursor editor"
+      ],
+      "context_aliases": [
+        "cursor"
+      ]
+    },
+    {
+      "id": "copilot",
+      "name": "GitHub Copilot",
+      "category": "agents",
+      "aliases": [
+        "github copilot",
+        "copilot"
+      ],
+      "search_query": "GitHub Copilot"
+    },
+    {
+      "id": "claudecode",
+      "name": "Claude Code",
+      "category": "agents",
+      "aliases": [
+        "claude code",
+        "claude-code"
+      ]
+    },
+    {
+      "id": "windsurf",
+      "name": "Windsurf",
+      "category": "agents",
+      "aliases": [
+        "windsurf",
+        "codeium"
+      ]
+    },
+    {
+      "id": "devin",
+      "name": "Devin",
+      "category": "agents",
+      "aliases": [
+        "devin ai",
+        "cognition labs"
+      ],
+      "context_aliases": [
+        "devin"
+      ]
+    },
+    {
+      "id": "aider",
+      "name": "Aider",
+      "category": "agents",
+      "aliases": [
+        "aider"
+      ]
+    },
+    {
+      "id": "vibecoding",
+      "name": "Vibe Coding",
+      "category": "practice",
+      "aliases": [
+        "vibe coding",
+        "vibe code",
+        "vibecoding"
+      ],
+      "search_query": "vibe coding"
+    },
+    {
+      "id": "docker",
+      "name": "Docker",
+      "category": "infra",
+      "aliases": [
+        "docker",
+        "dockerfile",
+        "containerization"
+      ]
+    },
+    {
+      "id": "kubernetes",
+      "name": "Kubernetes",
+      "category": "infra",
+      "aliases": [
+        "kubernetes",
+        "k8s",
+        "kubectl"
+      ]
+    },
+    {
+      "id": "aws",
+      "name": "AWS",
+      "category": "infra",
+      "aliases": [
+        "aws",
+        "amazon web services",
+        "ec2",
+        "lambda function",
+        "s3 bucket"
+      ]
+    },
+    {
+      "id": "gcp",
+      "name": "Google Cloud",
+      "category": "infra",
+      "aliases": [
+        "gcp",
+        "google cloud",
+        "cloud run",
+        "bigquery"
+      ]
+    },
+    {
+      "id": "azure",
+      "name": "Azure",
+      "category": "infra",
+      "aliases": [
+        "azure",
+        "microsoft azure"
+      ]
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "category": "infra",
+      "aliases": [
+        "vercel"
+      ]
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "category": "infra",
+      "aliases": [
+        "cloudflare",
+        "cloudflare workers",
+        "durable objects"
+      ]
+    },
+    {
+      "id": "terraform",
+      "name": "Terraform / IaC",
+      "category": "infra",
+      "aliases": [
+        "terraform",
+        "infrastructure as code",
+        "pulumi",
+        "opentofu"
+      ],
+      "search_query": "Terraform"
+    },
+    {
+      "id": "serverless",
+      "name": "Serverless",
+      "category": "infra",
+      "aliases": [
+        "serverless",
+        "edge function",
+        "edge functions"
+      ]
+    },
+    {
+      "id": "cicd",
+      "name": "CI/CD",
+      "category": "infra",
+      "aliases": [
+        "ci/cd",
+        "cicd",
+        "continuous integration",
+        "continuous deployment",
+        "github actions"
+      ],
+      "search_query": "CI/CD pipeline"
+    },
+    {
+      "id": "linux",
+      "name": "Linux",
+      "category": "infra",
+      "aliases": [
+        "linux",
+        "ubuntu",
+        "debian",
+        "nixos",
+        "arch linux"
+      ]
+    },
+    {
+      "id": "wasm",
+      "name": "WebAssembly",
+      "category": "infra",
+      "aliases": [
+        "webassembly",
+        "wasm",
+        "wasi"
+      ]
+    },
+    {
+      "id": "observability",
+      "name": "Observability",
+      "category": "infra",
+      "aliases": [
+        "observability",
+        "opentelemetry",
+        "grafana",
+        "prometheus",
+        "datadog",
+        "tracing"
+      ],
+      "search_query": "opentelemetry"
+    },
+    {
+      "id": "postgres",
+      "name": "PostgreSQL",
+      "category": "data",
+      "aliases": [
+        "postgres",
+        "postgresql",
+        "pgvector"
+      ]
+    },
+    {
+      "id": "sqlite",
+      "name": "SQLite",
+      "category": "data",
+      "aliases": [
+        "sqlite",
+        "libsql",
+        "turso"
+      ]
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "category": "data",
+      "aliases": [
+        "mongodb",
+        "mongo db"
+      ]
+    },
+    {
+      "id": "redis",
+      "name": "Redis",
+      "category": "data",
+      "aliases": [
+        "redis",
+        "valkey"
+      ]
+    },
+    {
+      "id": "vectordb",
+      "name": "Vector Databases",
+      "category": "data",
+      "aliases": [
+        "vector database",
+        "vector db",
+        "pinecone",
+        "weaviate",
+        "qdrant",
+        "chromadb",
+        "chroma db",
+        "milvus"
+      ],
+      "search_query": "vector database"
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase",
+      "category": "data",
+      "aliases": [
+        "supabase"
+      ]
+    },
+    {
+      "id": "firebase",
+      "name": "Firebase",
+      "category": "data",
+      "aliases": [
+        "firebase",
+        "firestore"
+      ]
+    },
+    {
+      "id": "duckdb",
+      "name": "DuckDB",
+      "category": "data",
+      "aliases": [
+        "duckdb",
+        "duck db"
+      ]
+    },
+    {
+      "id": "clickhouse",
+      "name": "ClickHouse",
+      "category": "data",
+      "aliases": [
+        "clickhouse",
+        "click house"
+      ]
+    },
+    {
+      "id": "kafka",
+      "name": "Kafka / Streaming",
+      "category": "data",
+      "aliases": [
+        "kafka",
+        "event streaming",
+        "pulsar"
+      ],
+      "search_query": "Apache Kafka"
+    },
+    {
+      "id": "spark",
+      "name": "Spark",
+      "category": "data",
+      "aliases": [
+        "apache spark",
+        "pyspark"
+      ],
+      "context_aliases": [
+        "spark"
+      ]
+    },
+    {
+      "id": "dbt",
+      "name": "dbt",
+      "category": "data",
+      "aliases": [
+        "dbt core",
+        "data build tool"
+      ],
+      "context_aliases": [
+        "dbt"
+      ]
+    },
+    {
+      "id": "pandas",
+      "name": "pandas / Polars",
+      "category": "data",
+      "aliases": [
+        "pandas",
+        "polars",
+        "numpy"
+      ],
+      "search_query": "pandas dataframe"
+    },
+    {
+      "id": "graphql",
+      "name": "GraphQL",
+      "category": "data",
+      "aliases": [
+        "graphql",
+        "apollo client"
+      ]
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "category": "tooling",
+      "aliases": [
+        "git",
+        "version control"
+      ],
+      "context_aliases": [
+        "github",
+        "gitlab"
+      ],
+      "search_query": "git version control"
+    },
+    {
+      "id": "vscode",
+      "name": "VS Code",
+      "category": "tooling",
+      "aliases": [
+        "vs code",
+        "vscode",
+        "visual studio code"
+      ]
+    },
+    {
+      "id": "neovim",
+      "name": "Neovim",
+      "category": "tooling",
+      "aliases": [
+        "neovim",
+        "nvim",
+        "vim motions"
+      ]
+    },
+    {
+      "id": "uv",
+      "name": "uv / Python tooling",
+      "category": "tooling",
+      "aliases": [
+        "uv package",
+        "uv python",
+        "poetry python",
+        "ruff",
+        "pyproject"
+      ],
+      "search_query": "ruff python"
+    },
+    {
+      "id": "vite",
+      "name": "Vite",
+      "category": "tooling",
+      "aliases": [
+        "vite",
+        "vitest",
+        "rolldown"
+      ]
+    },
+    {
+      "id": "testing",
+      "name": "Testing",
+      "category": "practice",
+      "aliases": [
+        "unit test",
+        "unit testing",
+        "integration test",
+        "tdd",
+        "test driven",
+        "pytest",
+        "jest",
+        "playwright",
+        "e2e test"
+      ],
+      "search_query": "automated testing"
+    },
+    {
+      "id": "typesafety",
+      "name": "Type Safety",
+      "category": "practice",
+      "aliases": [
+        "type safety",
+        "type safe",
+        "static typing",
+        "type checking",
+        "pydantic",
+        "zod"
+      ],
+      "search_query": "type safety"
+    },
+    {
+      "id": "systemdesign",
+      "name": "System Design",
+      "category": "practice",
+      "aliases": [
+        "system design",
+        "distributed system",
+        "distributed systems",
+        "scalability",
+        "microservices",
+        "monolith"
+      ],
+      "search_query": "system design"
+    },
+    {
+      "id": "algorithms",
+      "name": "Algorithms / DSA",
+      "category": "practice",
+      "aliases": [
+        "leetcode",
+        "data structures",
+        "algorithms",
+        "dsa",
+        "dynamic programming",
+        "big o"
+      ],
+      "search_query": "leetcode algorithms"
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "category": "practice",
+      "aliases": [
+        "cybersecurity",
+        "security vulnerability",
+        "penetration testing",
+        "owasp",
+        "prompt injection",
+        "authentication",
+        "oauth"
+      ],
+      "search_query": "application security"
+    },
+    {
+      "id": "performance",
+      "name": "Performance",
+      "category": "practice",
+      "aliases": [
+        "performance optimization",
+        "latency",
+        "profiling",
+        "memory leak",
+        "benchmark performance"
+      ],
+      "search_query": "performance optimization"
+    },
+    {
+      "id": "architecture",
+      "name": "Architecture",
+      "category": "practice",
+      "aliases": [
+        "clean architecture",
+        "design pattern",
+        "design patterns",
+        "solid principles",
+        "refactoring",
+        "tech debt",
+        "technical debt"
+      ],
+      "search_query": "software architecture"
+    },
+    {
+      "id": "devex",
+      "name": "Developer Experience",
+      "category": "practice",
+      "aliases": [
+        "developer experience",
+        "devex",
+        "dx improvement",
+        "developer productivity"
+      ],
+      "search_query": "developer experience"
+    },
+    {
+      "id": "opensource",
+      "name": "Open Source",
+      "category": "practice",
+      "aliases": [
+        "open source",
+        "opensource",
+        "oss project",
+        "self hosted",
+        "self-hosted"
+      ],
+      "search_query": "open source software"
+    },
+    {
+      "id": "careers",
+      "name": "Careers & Hiring",
+      "category": "practice",
+      "aliases": [
+        "job market",
+        "tech layoffs",
+        "software engineering job",
+        "hiring",
+        "interview prep",
+        "junior developer",
+        "salary",
+        "get hired",
+        "career advice"
+      ],
+      "search_query": "developer hiring"
+    },
+    {
+      "id": "freelance",
+      "name": "Freelance / Indie",
+      "category": "practice",
+      "aliases": [
+        "freelance",
+        "indie hacker",
+        "side project",
+        "solopreneur",
+        "saas business",
+        "micro saas"
+      ],
+      "search_query": "indie hacker"
+    }
+  ]
+}
